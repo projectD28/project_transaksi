@@ -15,6 +15,7 @@ class PembayaranRekap extends Model
 
     protected $fillable = [
         "payment_number",
+        "transaction_number",
         "date",
         "payout_percentage",
         "payment_amount",

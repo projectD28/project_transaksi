@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\TransactionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,5 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/penjualan', [TransactionController::class, 'Penjualan']);
 Route::get('/komisi', [TransactionController::class, 'KomisiPenjualan']);
-Route::post('/pembayaran', [TransactionController::class, 'Pembayaran']);
+Route::get('/pembayaran', [PaymentController::class, 'Pembayaran']);
+Route::post('/buat_pembayaran', [PaymentController::class, 'BuatPembayaran']);
