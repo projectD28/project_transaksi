@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "c804442f-39a2-4ede-ad7e-d7429b59e3d7",
+		"name": "transaction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14760739",
+		"_collection_link": "https://www.postman.com/lunar-module-explorer-5097249/workspace/transaction/collection/14760739-c804442f-39a2-4ede-ad7e-d7429b59e3d7?action=share&source=collection_link&creator=14760739"
+	},
+	"item": [
+		{
+			"name": "komisi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/komisi",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"komisi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "penjualan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/penjualan",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"penjualan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pembayaran",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/pembayaran",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pembayaran"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pembayaran",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transaction_number\":\"TRX001\",\r\n    \"jumlah_pembayaran\" : 1000000,\r\n    \"tanggal_pembayaran\" : \"2024-01-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/buat_pembayaran",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"buat_pembayaran"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
