@@ -1,0 +1,49 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Transaction",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8000/api"
+        }
+    ],
+    "paths": {
+        "/komisi": {
+            "get": {
+                "tags": [
+                    "Komisi"
+                ],
+                "summary": "Komisi",
+                "description": "Marketing yang mendapatkan komisi",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "marketing": {
+                                            "type": "string"
+                                        },
+                                        "bulan": {
+                                            "type": "string"
+                                        },
+                                        "omzet": {
+                                            "type": "integer"
+                                        },
+                                        "komisi": {
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
